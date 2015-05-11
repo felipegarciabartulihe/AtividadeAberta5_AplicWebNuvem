@@ -6,7 +6,7 @@ const USUARIO = 'adminGUxs1Tl';
 const SENHA = 'hvyVcslYeB6_';
 const BANCO = 'atividade05';
 const PORTA = '3306'; 
-const HOST = 'localhost';
+const HOST = '127.10.107.2';
 
 $con = new PDO("mysql:host=".HOST.";port=".PORTA.";dbname=".BANCO, USUARIO, SENHA,  array(PDO::ATTR_PERSISTENT => true));
 $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_SILENT);
