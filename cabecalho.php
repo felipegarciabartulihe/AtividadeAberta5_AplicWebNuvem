@@ -8,13 +8,8 @@ const BANCO = 'atividade05';
 const PORTA = '3306'; 
 const HOST = 'localhost';
 
-try {
-	$con = new PDO("mysql:host=".HOST.";port=".PORTA.";dbname=".BANCO, USUARIO, SENHA,  array(PDO::ATTR_PERSISTENT => true));
-	$con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_SILENT);
-} catch (PDOExcecption $i) {
-	print "Erro: <code>" . $i->getMessage() . "</code>";
-	break;
-}
+$con = new PDO("mysql:host=".HOST.";port=".PORTA.";dbname=".BANCO, USUARIO, SENHA,  array(PDO::ATTR_PERSISTENT => true));
+$con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_SILENT);
 
 ?>
 <!DOCTYPE html>
